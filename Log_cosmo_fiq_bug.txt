@@ -1,0 +1,1195 @@
+U-Boot 2015.04-imx_v2015.04_4.1.15_1.0.0_ga+gd7d7c43 (Jul 14 2017 - 17:06:11)
+
+CPU:   Freescale i.MX6SOLO rev1.3 at 792 MHz
+CPU:   Temperature 56 C
+Reset cause: POR
+Board: i.MX6 HIEC
+I2C:   ready
+DRAM:  512 MiB
+PMIC:  PFUZE100 ID=0x10
+NAND:  4096 MiB
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1
+MMC: no card present
+MMC init failed
+Using default environment
+
+auto-detected panel LCD-VGA
+Display: LCD-VGA (640x480)
+In:    serial
+Out:   serial
+Err:   serial
+MMC: no card present
+Net:   FEC [PRIME]
+Error: FEC address not set.
+
+Boot from USB for mfgtools
+Use default environment for                              mfgtools
+Run bootcmd_mfg: run mfgtool_args;bootz ${loadaddr} ${initrd_addr} ${fdt_addr};
+Hit any key to stop autoboot:  0
+Kernel image @ 0x12000000 [ 0x000000 - 0x5f2a98 ]
+## Loading init Ramdisk from Legacy Image at 12c00000 ...
+   Image Name:   fsl-image-mfgtool-initramfs-imx6
+   Image Type:   ARM Linux RAMDisk Image (gzip compressed)
+   Data Size:    8591032 Bytes = 8.2 MiB
+   Load Address: 00000000
+   Entry Point:  00000000
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at 18000000
+   Booting using the fdt blob at 0x18000000
+   Using Device Tree in place at 18000000, end 1800d5a0
+switch to ldo_bypass mode!
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.1.15-1.1.1+gd5d7c02 (hinoeng@Yocto) (gcc version 5.2.0 (GCC) ) #14 SMP PREEMPT Fri May 18 13:15:14 JST 2018
+CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+Machine model: Hino iMX6 Solo board
+Reserved memory: created CMA memory pool at 0x1c000000, size 320 MiB
+Reserved memory: initialized node linux,cma, compatible id shared-dma-pool
+Memory policy: Data cache writeback
+PERCPU: Embedded 11 pages/cpu @8bb2d000 s16064 r8192 d20800 u45056
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 130048
+Kernel command line: console=ttymxc0,115200 rdinit=/linuxrc g_mass_storage.stall=0 g_mass_storage.removable=1 g_mass_storage.file=/fat g_mass_storage.ro=1 g_mass_storage.idVendor=0x066F g_mass_storage.idProduct=0x37FF g_mass_storage.iSerialNumber= enable_wait_mode=off mtdparts=gpmi-nand:64m(boot),16m(kernel),16m(dtb),-(rootfs)
+PID hash table entries: 2048 (order: 1, 8192 bytes)
+Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+Memory: 171024K/524288K available (7652K kernel code, 405K rwdata, 2696K rodata, 600K init, 435K bss, 25584K reserved, 327680K cma-reserved, 0K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xa0800000 - 0xff000000   (1512 MB)
+    lowmem  : 0x80000000 - 0xa0000000   ( 512 MB)
+    pkmap   : 0x7fe00000 - 0x80000000   (   2 MB)
+    modules : 0x7f000000 - 0x7fe00000   (  14 MB)
+      .text : 0x80008000 - 0x80a233d0   (10349 kB)
+      .init : 0x80a24000 - 0x80aba000   ( 600 kB)
+      .data : 0x80aba000 - 0x80b1f500   ( 406 kB)
+       .bss : 0x80b22000 - 0x80b8ef40   ( 436 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+Preemptible hierarchical RCU implementation.
+        Additional per-CPU info printed with stalls.
+        RCU restricting CPUs from NR_CPUS=4 to nr_cpu_ids=1.
+RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+NR_IRQS:16 nr_irqs:16 16
+L2C-310 erratum 769419 enabled
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 ID prefetch enabled, offset 16 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 16 ways, 512 kB
+L2C-310: CACHE_ID 0x410000c8, AUX_CTRL 0x76050001
+##### GIC FIQ.
+mxc_clocksource_init 3000000
+Switching to timer-based delay loop, resolution 333ns
+sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+clocksource mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+CPU: Testing write buffer coherency: ok
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x10008280 - 0x100082b4
+Brought up 1 CPUs
+SMP: Total of 1 processors activated (6.00 BogoMIPS).
+devtmpfs: initialized
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+clocksource jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+CPU identified as i.MX6DL, silicon rev 1.3
+anatop_regulator 20c8000.anatop:regulator-vddcore@140: Failed to read a valid default voltage selector.
+anatop_regulator: probe of 20c8000.anatop:regulator-vddcore@140 failed with error -22
+anatop_regulator 20c8000.anatop:regulator-vddsoc@140: Failed to read a valid default voltage selector.
+anatop_regulator: probe of 20c8000.anatop:regulator-vddsoc@140 failed with error -22
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+imx6dl-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+mxs-dma 110000.dma-apbh: initialized
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+2000000.aips-bus:usbphy_nop1 supply vcc not found, using dummy regulator
+2000000.aips-bus:usbphy_nop2 supply vcc not found, using dummy regulator
+i2c i2c-1: IMX I2C adapter registered
+i2c i2c-1: can't use DMA
+i2c i2c-2: IMX I2C adapter registered
+i2c i2c-2: can't use DMA
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+imx-ipuv3 2400000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+MIPI CSI2 driver module loaded
+Advanced Linux Sound Architecture Driver Initialized.
+Bluetooth: Core ver 2.20
+NET: Registered protocol family 31
+Bluetooth: HCI device and connection manager initialized
+Bluetooth: HCI socket layer initialized
+Bluetooth: L2CAP socket layer initialized
+Bluetooth: SCO socket layer initialized
+Switched to clocksource mxc_timer1
+NET: Registered protocol family 2
+TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+TCP bind hash table entries: 4096 (order: 3, 32768 bytes)
+TCP: Hash tables configured (established 4096 bind 4096)
+UDP hash table entries: 256 (order: 1, 8192 bytes)
+UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 8392K (82c00000 - 83432000)
+CPU PMU: Failed to parse /soc/pmu/interrupt-affinity[0]
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+Bus freq driver module loaded
+futex hash table entries: 256 (order: 2, 16384 bytes)
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+jffs2: version 2.2. (NAND) ｩ 2001-2006 Red Hat, Inc.
+fuse init (API version 7.23)
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+imx-weim 21b8000.weim: Driver registered.
+backlight supply power not found, using dummy regulator
+MIPI DSI driver module loaded
+MIPI DSI driver module loaded
+mxc_sdc_fb fb@0: registered mxc display driver ldb
+imx-ipuv3 2400000.ipu: ch = 9, pm_runtime_put failed:-38!
+CPU: 0 PID: 1 Comm: swapper/0 Not tainted 4.1.15-1.1.1+gd5d7c02 #14
+Hardware name: Freescale i.MX6 Quad/DualLite (Device Tree)
+[<800158d8>] (unwind_backtrace) from [<80012628>] (show_stack+0x10/0x14)
+[<80012628>] (show_stack) from [<80748dac>] (dump_stack+0x84/0xc4)
+[<80748dac>] (dump_stack) from [<80513004>] (ipu_uninit_channel+0x51c/0xa9c)
+[<80513004>] (ipu_uninit_channel) from [<802f72c8>] (mxcfb_set_par+0x900/0xb1c)
+[<802f72c8>] (mxcfb_set_par) from [<802dd80c>] (fbcon_init+0x554/0x590)
+[<802dd80c>] (fbcon_init) from [<8033ae80>] (visual_init+0xa0/0xe8)
+[<8033ae80>] (visual_init) from [<8033c708>] (do_bind_con_driver+0x1c0/0x3dc)
+[<8033c708>] (do_bind_con_driver) from [<8033cce0>] (do_take_over_console+0x134/0x1bc)
+[<8033cce0>] (do_take_over_console) from [<802dd8cc>] (do_fbcon_takeover+0x84/0xe0)
+[<802dd8cc>] (do_fbcon_takeover) from [<80042d50>] (notifier_call_chain+0x44/0x84)
+[<80042d50>] (notifier_call_chain) from [<800430ac>] (__blocking_notifier_call_chain+0x48/0x60)
+[<800430ac>] (__blocking_notifier_call_chain) from [<800430dc>] (blocking_notifier_call_chain+0x18/0x20)
+[<800430dc>] (blocking_notifier_call_chain) from [<802e3334>] (register_framebuffer+0x194/0x26c)
+[<802e3334>] (register_framebuffer) from [<802f4248>] (mxcfb_register+0x21c/0x3b8)
+[<802f4248>] (mxcfb_register) from [<802f4f28>] (mxcfb_probe+0x850/0xe88)
+[<802f4f28>] (mxcfb_probe) from [<80372608>] (platform_drv_probe+0x2c/0x60)
+[<80372608>] (platform_drv_probe) from [<803711c8>] (really_probe+0x1b0/0x28c)
+[<803711c8>] (really_probe) from [<80371390>] (__driver_attach+0x98/0x9c)
+[<80371390>] (__driver_attach) from [<8036f864>] (bus_for_each_dev+0x68/0x9c)
+[<8036f864>] (bus_for_each_dev) from [<80370968>] (bus_add_driver+0x148/0x1f0)
+[<80370968>] (bus_add_driver) from [<80371788>] (driver_register+0x78/0xf8)
+[<80371788>] (driver_register) from [<80009690>] (do_one_initcall+0x8c/0x1d4)
+[<80009690>] (do_one_initcall) from [<80a24dbc>] (kernel_init_freeable+0x144/0x1e4)
+[<80a24dbc>] (kernel_init_freeable) from [<80745108>] (kernel_init+0x8/0xe8)
+[<80745108>] (kernel_init) from [<8000f428>] (ret_from_fork+0x14/0x2c)
+Console: switching to colour frame buffer device 80x30
+mxc_hdmi 20e0000.hdmi_video: Detected HDMI controller 0x13:0x1a:0xa0:0xc1
+fbcvt: 1920x1080@60: CVT Name - 2.073M9
+mxc_sdc_fb fb@1: registered mxc display driver hdmi
+mxc_sdc_fb fb@1: ipu0-di0 already in use
+mxc_sdc_fb: probe of fb@1 failed with error -16
+imx-sdma 20ec000.sdma: no iram assigned, using external mem
+imx-sdma 20ec000.sdma: no event needs to be remapped
+imx-sdma 20ec000.sdma: loaded firmware 3.3
+imx-sdma 20ec000.sdma: initialized
+pfuze100-regulator 1-0008: Full layer: 2, Metal layer: 1
+pfuze100-regulator 1-0008: FAB: 0, FIN: 0
+pfuze100-regulator 1-0008: pfuze100 found.
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 25, base_baud = 5000000) is a IMX
+console [ttymxc0] enabled
+21e8000.serial: ttymxc1 at MMIO 0x21e8000 (irq = 296, base_baud = 5000000) is a IMX
+[drm] Initialized drm 1.1.0 20060810
+[drm] Initialized vivante 1.0.0 20120216 on minor 0
+brd: module loaded
+loop: module loaded
+nand: device found, Manufacturer ID: 0x2c, Chip ID: 0x68
+nand: Micron MT29F32G08ABAAAWP
+nand: 4096 MiB, SLC, erase size: 1024 KiB, page size: 8192, OOB size: 448
+------------[ cut here ]------------
+WARNING: CPU: 0 PID: 1 at /home/hinoeng/yocto/fsl-release-bsp/build-imx6solohinoeng/tmp/work-shared/imx6solohinoeng/kernel-source/drivers/clk/clk.c:616 clk_disable+0x28/0x34()
+Modules linked in:
+CPU: 0 PID: 1 Comm: swapper/0 Not tainted 4.1.15-1.1.1+gd5d7c02 #14
+Hardware name: Freescale i.MX6 Quad/DualLite (Device Tree)
+[<800158d8>] (unwind_backtrace) from [<80012628>] (show_stack+0x10/0x14)
+[<80012628>] (show_stack) from [<80748dac>] (dump_stack+0x84/0xc4)
+[<80748dac>] (dump_stack) from [<8002a530>] (warn_slowpath_common+0x80/0xb0)
+[<8002a530>] (warn_slowpath_common) from [<8002a5fc>] (warn_slowpath_null+0x1c/0x24)
+[<8002a5fc>] (warn_slowpath_null) from [<80555174>] (clk_disable+0x28/0x34)
+[<80555174>] (clk_disable) from [<803f4784>] (gpmi_extra_init+0xf4/0x1d8)
+[<803f4784>] (gpmi_extra_init) from [<803f31e4>] (gpmi_nand_probe+0x490/0x938)
+[<803f31e4>] (gpmi_nand_probe) from [<80372608>] (platform_drv_probe+0x2c/0x60)
+[<80372608>] (platform_drv_probe) from [<803711c8>] (really_probe+0x1b0/0x28c)
+[<803711c8>] (really_probe) from [<80371390>] (__driver_attach+0x98/0x9c)
+[<80371390>] (__driver_attach) from [<8036f864>] (bus_for_each_dev+0x68/0x9c)
+[<8036f864>] (bus_for_each_dev) from [<80370968>] (bus_add_driver+0x148/0x1f0)
+[<80370968>] (bus_add_driver) from [<80371788>] (driver_register+0x78/0xf8)
+[<80371788>] (driver_register) from [<80009690>] (do_one_initcall+0x8c/0x1d4)
+[<80009690>] (do_one_initcall) from [<80a24dbc>] (kernel_init_freeable+0x144/0x1e4)
+[<80a24dbc>] (kernel_init_freeable) from [<80745108>] (kernel_init+0x8/0xe8)
+[<80745108>] (kernel_init) from [<8000f428>] (ret_from_fork+0x14/0x2c)
+---[ end trace 9dea8371816c2ee0 ]---
+------------[ cut here ]------------
+WARNING: CPU: 0 PID: 1 at /home/hinoeng/yocto/fsl-release-bsp/build-imx6solohinoeng/tmp/work-shared/imx6solohinoeng/kernel-source/drivers/clk/clk.c:515 clk_unprepare+0x24/0x2c()
+Modules linked in:
+CPU: 0 PID: 1 Comm: swapper/0 Tainted: G        W       4.1.15-1.1.1+gd5d7c02 #14
+Hardware name: Freescale i.MX6 Quad/DualLite (Device Tree)
+[<800158d8>] (unwind_backtrace) from [<80012628>] (show_stack+0x10/0x14)
+[<80012628>] (show_stack) from [<80748dac>] (dump_stack+0x84/0xc4)
+[<80748dac>] (dump_stack) from [<8002a530>] (warn_slowpath_common+0x80/0xb0)
+[<8002a530>] (warn_slowpath_common) from [<8002a5fc>] (warn_slowpath_null+0x1c/0x24)
+[<8002a5fc>] (warn_slowpath_null) from [<80555144>] (clk_unprepare+0x24/0x2c)
+[<80555144>] (clk_unprepare) from [<803f478c>] (gpmi_extra_init+0xfc/0x1d8)
+[<803f478c>] (gpmi_extra_init) from [<803f31e4>] (gpmi_nand_probe+0x490/0x938)
+[<803f31e4>] (gpmi_nand_probe) from [<80372608>] (platform_drv_probe+0x2c/0x60)
+[<80372608>] (platform_drv_probe) from [<803711c8>] (really_probe+0x1b0/0x28c)
+[<803711c8>] (really_probe) from [<80371390>] (__driver_attach+0x98/0x9c)
+[<80371390>] (__driver_attach) from [<8036f864>] (bus_for_each_dev+0x68/0x9c)
+[<8036f864>] (bus_for_each_dev) from [<80370968>] (bus_add_driver+0x148/0x1f0)
+[<80370968>] (bus_add_driver) from [<80371788>] (driver_register+0x78/0xf8)
+[<80371788>] (driver_register) from [<80009690>] (do_one_initcall+0x8c/0x1d4)
+[<80009690>] (do_one_initcall) from [<80a24dbc>] (kernel_init_freeable+0x144/0x1e4)
+[<80a24dbc>] (kernel_init_freeable) from [<80745108>] (kernel_init+0x8/0xe8)
+[<80745108>] (kernel_init) from [<8000f428>] (ret_from_fork+0x14/0x2c)
+---[ end trace 9dea8371816c2ee1 ]---
+gpmi-nand 112000.gpmi-nand: enable the asynchronous EDO mode 5
+Bad block table found at page 524160, version 0x01
+Bad block table found at page 524032, version 0x01
+nand_read_bbt: bad block at 0x000005a00000
+nand_read_bbt: bad block at 0x000005b00000
+4 cmdlinepart partitions found on MTD device gpmi-nand
+Creating 4 MTD partitions on "gpmi-nand":
+0x000000000000-0x000004000000 : "boot"
+0x000004000000-0x000005000000 : "kernel"
+0x000005000000-0x000006000000 : "dtb"
+0x000006000000-0x000100000000 : "rootfs"
+gpmi-nand 112000.gpmi-nand: driver registered.
+CAN device driver interface
+2188000.ethernet supply phy not found, using dummy regulator
+pps pps0: new PPS source ptp0
+fec 2188000.ethernet (unnamed net_device) (uninitialized): Invalid MAC address: 00:00:00:00:00:00
+fec 2188000.ethernet (unnamed net_device) (uninitialized): Using random MAC address: f6:94:00:e4:68:3d
+libphy: fec_enet_mii_bus: probed
+fec 2188000.ethernet eth0: registered PHC device 0
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-mxc: Freescale On-Chip EHCI Host driver
+usbcore: registered new interface driver usb-storage
+usbcore: registered new interface driver usb_ehset_test
+2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+usb_otg_vbus: supplied by SWBST
+usb_h1_vbus: supplied by SWBST
+ci_hdrc ci_hdrc.1: EHCI Host Controller
+ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+Mass Storage Function, version: 2009/09/11
+LUN: removable file: (no medium)
+LUN: removable read only file: /fat
+Number of LUNs=1
+Number of LUNs=1
+g_mass_storage gadget: Mass Storage Gadget, version: 2009/09/11
+g_mass_storage gadget: g_mass_storage ready
+mousedev: PS/2 mouse device common for all mice
+input: max11801_ts as /devices/soc0/soc/2100000.aips-bus/21a4000.i2c/i2c-1/1-0048/input/input0
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc0
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+mxc_v4l2_output v4l2_out: V4L2 device registered as video16
+mxc_v4l2_output v4l2_out: V4L2 device registered as video17
+max8903-charger max8903@0: request max8903-UOK error!!
+max8903-charger: probe of max8903@0 failed with error -16
+mag3110 2-000e: check mag3110 chip ID
+mag3110 2-000e: read chip ID 0xfffffffb is not equal to 0xc4!
+mag3110: probe of 2-000e failed with error -22
+imx2-wdt 20c0000.wdog: use WDOG_B to reboot.
+imx2-wdt 20c0000.wdog: timeout 60 sec (nowayout=0)
+Bluetooth: HCI UART driver ver 2.3
+Bluetooth: HCI UART protocol H4 registered
+Bluetooth: HCI UART protocol BCSP registered
+Bluetooth: HCI UART protocol ATH3K registered
+usbcore: registered new interface driver bcm203x
+usbcore: registered new interface driver btusb
+usbcore: registered new interface driver ath3k
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+/soc/aips-bus@02100000/usdhc@02194000: voltage-ranges unspecified
+sdhci-esdhc-imx 2194000.usdhc: Got CD GPIO
+sdhci-esdhc-imx 2194000.usdhc: Got WP GPIO
+sdhci-esdhc-imx 2194000.usdhc: No vmmc regulator found
+sdhci-esdhc-imx 2194000.usdhc: No vqmmc regulator found
+mmc1: SDHCI controller on 2194000.usdhc [2194000.usdhc] using ADMA
+/soc/aips-bus@02100000/usdhc@02198000: voltage-ranges unspecified
+sdhci-esdhc-imx 2198000.usdhc: Got CD GPIO
+sdhci-esdhc-imx 2198000.usdhc: Got WP GPIO
+sdhci-esdhc-imx 2198000.usdhc: No vmmc regulator found
+sdhci-esdhc-imx 2198000.usdhc: No vqmmc regulator found
+g_mass_storage gadget: high-speed config #1: Linux File-Backed Storage
+mmc2: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+mxc_vpu 2040000.vpu_fsl: VPU initialized
+mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+caam 2100000.caam: Entropy delay = 3200
+caam 2100000.caam: Instantiated RNG4 SH0
+caam 2100000.caam: Instantiated RNG4 SH1
+caam 2100000.caam: device ID = 0x0a16010000000100 (Era -524)
+caam 2100000.caam: job rings = 2, qi = 0
+caam algorithms registered in /proc/crypto
+caam_jr 2101000.jr0: registering rng-caam
+platform caam_sm: blkkey_ex: 4 keystore units available
+platform caam_sm: 64-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: 64-bit black key:
+platform caam_sm: [0000] 6b b3 ec 1a fb ba 63 fa
+platform caam_sm: [0008] dc ba 56 3a 60 16 eb ff
+platform caam_sm: 128-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: 128-bit black key:
+platform caam_sm: [0000] d1 89 5a 02 b9 61 c9 25
+platform caam_sm: [0008] d4 71 1c 72 64 ac ee ec
+platform caam_sm: 192-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: 192-bit black key:
+platform caam_sm: [0000] 2b c1 26 c4 3a 8e 99 82
+platform caam_sm: [0008] 64 04 79 cc 62 e6 ad 27
+platform caam_sm: [0016] 55 a5 d6 c0 b7 87 f6 f1
+platform caam_sm: [0024] f1 4f 9e 61 50 aa 5d a6
+platform caam_sm: 256-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: [0024] 18 19 1a 1b 1c 1d 1e 1f
+platform caam_sm: 256-bit black key:
+platform caam_sm: [0000] db 98 32 18 8e f5 cb b9
+platform caam_sm: [0008] d3 86 f4 01 f8 31 3b a6
+platform caam_sm: [0016] f6 e6 81 62 1e 74 35 4c
+platform caam_sm: [0024] b2 c3 b9 7e 1a 4c b2 54
+platform caam_sm: 64-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 196-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 64-bit black key in blob:
+platform caam_sm: [0000] 8d 75 79 70 b5 85 c7 4f
+platform caam_sm: [0008] b4 68 0b 27 ca ee 50 48
+platform caam_sm: [0016] ec 3b 4a db fa 2b 8d 42
+platform caam_sm: [0024] 81 2c 7c 8b 82 71 66 49
+platform caam_sm: [0032] e7 0d 36 67 a1 8e e9 a3
+platform caam_sm: [0040] 70 28 d8 8a 74 6c a1 fd
+platform caam_sm: [0048] 50 91 1f 29 4c c0 57 8a
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit black key in blob:
+platform caam_sm: [0000] 36 70 b7 6a 38 76 68 1a
+platform caam_sm: [0008] 6c 27 53 50 f5 5a 6d a5
+platform caam_sm: [0016] 02 9a db 25 e7 be 77 b1
+platform caam_sm: [0024] 14 a0 57 5d 3e f2 21 62
+platform caam_sm: [0032] 57 50 ca ad e3 b0 52 7d
+platform caam_sm: [0040] 3f d6 dc a7 86 98 9a c0
+platform caam_sm: [0048] 95 2d 1c 46 7a 3e f6 87
+platform caam_sm: [0056] 69 e9 f2 2d f7 61 86 9d
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 192-bit black key in blob:
+platform caam_sm: [0000] e2 39 90 e8 02 bc f5 71
+platform caam_sm: [0008] 05 cd 2f c6 95 d2 14 af
+platform caam_sm: [0016] d3 11 76 df a1 e4 87 b8
+platform caam_sm: [0024] 05 84 a8 3f 01 22 a3 90
+platform caam_sm: [0032] 6a 5c 81 c9 a7 10 98 8d
+platform caam_sm: [0040] 2e f2 9b 35 a8 94 06 2b
+platform caam_sm: [0048] 08 06 97 ed 28 a7 4a da
+platform caam_sm: [0056] 22 0b c9 86 34 1b 82 e7
+platform caam_sm: [0064] 8c 27 dc 49 2f f0 ed 4a
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit black key in blob:
+platform caam_sm: [0000] ad 1d f5 e6 4d eb cf 6f
+platform caam_sm: [0008] 04 15 c5 7f 7f bf c9 ce
+platform caam_sm: [0016] 8e 09 34 db 93 e2 c7 d0
+platform caam_sm: [0024] 2c 44 9b d0 52 a6 01 38
+platform caam_sm: [0032] 5c 3c 40 a5 50 63 97 c9
+platform caam_sm: [0040] 2a 8b 60 c3 22 08 62 fd
+platform caam_sm: [0048] b6 51 10 75 d3 82 33 cb
+platform caam_sm: [0056] ae 87 d2 a0 94 c7 98 97
+platform caam_sm: [0064] ff b2 88 50 8c 9c c9 d1
+platform caam_sm: [0072] 9a 8c 23 cb 13 89 b8 4b
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: restored 64-bit black key:
+platform caam_sm: [0000] e7 b0 cf 82 32 a5 78 d6
+platform caam_sm: [0008] 85 ef 67 f6 a3 3b f4 00
+platform caam_sm: restored 128-bit black key:
+platform caam_sm: [0000] d1 89 5a 02 b9 61 c9 25
+platform caam_sm: [0008] d4 71 1c 72 64 ac ee ec
+platform caam_sm: restored 192-bit black key:
+platform caam_sm: [0000] 2b c1 26 c4 3a 8e 99 82
+platform caam_sm: [0008] 64 04 79 cc 62 e6 ad 27
+platform caam_sm: [0016] a1 1d 49 eb a7 9c 3f a5
+platform caam_sm: [0024] a4 4b 2f 5a a0 3d 4e d7
+platform caam_sm: restored 256-bit black key:
+platform caam_sm: [0000] db 98 32 18 8e f5 cb b9
+platform caam_sm: [0008] d3 86 f4 01 f8 31 3b a6
+platform caam_sm: [0016] f6 e6 81 62 1e 74 35 4c
+platform caam_sm: [0024] b2 c3 b9 7e 1a 4c b2 54
+snvs-secvio 20cc000.caam-snvs: can't get snvs clock
+snvs-secvio 20cc000.caam-snvs: violation handlers armed - non-secure state
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+fsl-asrc 2034000.asrc: driver registered
+fsl-hdmi-dai soc:hdmi_audio@00120000: failed to probe. Load HDMI-video first.
+fsl-hdmi-dai: probe of soc:hdmi_audio@00120000 failed with error -12
+imx-wm8962 sound: audmux internal port setup failed
+imx-wm8962: probe of sound failed with error -22
+imx-audio-hdmi sound-hdmi: initialize HDMI-audio failed. load HDMI-video first!
+NET: Registered protocol family 26
+NET: Registered protocol family 10
+sit: IPv6 over IPv4 tunneling driver
+NET: Registered protocol family 17
+can: controller area network core (rev 20120528 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20120528)
+can: broadcast manager protocol (rev 20120528 t)
+can: netlink gateway (rev 20130117) max_hops=1
+Bluetooth: RFCOMM TTY layer initialized
+Bluetooth: RFCOMM socket layer initialized
+Bluetooth: RFCOMM ver 1.11
+Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Bluetooth: BNEP filters: protocol multicast
+Bluetooth: BNEP socket layer initialized
+Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+Bluetooth: HIDP socket layer initialized
+8021q: 802.1Q VLAN Support v1.8
+Key type dns_resolver registered
+imx_epdc_fb 20f4000.epdc: can't get/select pinctrl
+backlight supply power not found, using dummy regulator
+backlight supply power not found, using dummy regulator
+input: gpio-keys as /devices/soc0/gpio-keys/input/input1
+backlight supply power not found, using dummy regulator
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:00:01 UTC (1)
+VGEN3: disabling
+VGEN2: disabling
+VGEN1: disabling
+SW4: disabling
+wm8962-supply: disabling
+usb_otg_vbus: disabling
+ALSA device list:
+  No soundcards found.
+Freeing unused kernel memory: 600K (80a24000 - 80aba000)
+Starting UTP
+uuc 0.5 [built Sep 16 2016 02:36:28]
+UTP: Waiting for device to appear
+UTP: file/device node /dev/utp already exists
+cpu_id is 0
+UTP: received command '$ mount -t debugfs debugfs /sys/kernel/debug'
+UTP: executing "mount -t debugfs debugfs /sys/kernel/debug"
+UTP: sending Success to kernel for command $ mount -t debugfs debugfs /sys/kernel/debug.
+utp_poll: pass returned.
+UTP: received command '$ flash_erase /dev/mtd0 0 0'
+UTP: executing "flash_erase /dev/mtd0 0 0"
+Erasing 1024 Kibyte @ 0 --  0 % complete gpmi-nand 112000.gpmi-nand: DMA timeout, last DMA :4
+gpmi-nand 112000.gpmi-nand: Show GPMI registers :
+gpmi-nand 112000.gpmi-nand: offset 0x000 : 0xff000005
+gpmi-nand 112000.gpmi-nand: offset 0x010 : 0xff000005
+gpmi-nand 112000.gpmi-nand: offset 0x020 : 0xff000005
+gpmi-nand 112000.gpmi-nand: offset 0x030 : 0xff000005
+gpmi-nand 112000.gpmi-nand: offset 0x040 : 0xff000005
+gpmi-nand 112000.gpmi-nand: offset 0x050 : 0xff000005
+gpmi-nand 112000.gpmi-nand: offset 0x060 : 0xff000005
+gpmi-nand 112000.gpmi-nand: offset 0x070 : 0xff000005
+gpmi-nand 112000.gpmi-nand: offset 0x080 : 0xff000005
+gpmi-nand 112000.gpmi-nand: offset 0x090 : 0xff000005
+gpmi-nand 112000.gpmi-nand: offset 0x0a0 : 0xff000005
+gpmi-nand 112000.gpmi-nand: offset 0x0b0 : 0xff000005
+gpmi-nand 112000.gpmi-nand: offset 0x0c0 : 0xff000005
+gpmi-nand 112000.gpmi-nand: offset 0x0d0 : 0xff000005
+gpmi-nand 112000.gpmi-nand: Show BCH registers :
+gpmi-nand 112000.gpmi-nand: offset 0x000 : 0x20da2080
+gpmi-nand 112000.gpmi-nand: offset 0x010 : 0x20da2080
+gpmi-nand 112000.gpmi-nand: offset 0x020 : 0x20da2080
+gpmi-nand 112000.gpmi-nand: offset 0x030 : 0x20da2080
+gpmi-nand 112000.gpmi-nand: offset 0x040 : 0x20da2080
+gpmi-nand 112000.gpmi-nand: offset 0x050 : 0x20da2080
+gpmi-nand 112000.gpmi-nand: offset 0x060 : 0x20da2080
+gpmi-nand 112000.gpmi-nand: offset 0x070 : 0x20da2080
+gpmi-nand 112000.gpmi-nand: offset 0x080 : 0x20da2080
+gpmi-nand 112000.gpmi-nand: offset 0x090 : 0x20da2080
+gpmi-nand 112000.gpmi-nand: offset 0x0a0 : 0x20da2080
+gpmi-nand 112000.gpmi-nand: offset 0x0b0 : 0x20da2080
+gpmi-nand 112000.gpmi-nand: offset 0x0c0 : 0x20da2080
+gpmi-nand 112000.gpmi-nand: offset 0x0d0 : 0x20da2080
+gpmi-nand 112000.gpmi-nand: offset 0x0e0 : 0x20da2080
+gpmi-nand 112000.gpmi-nand: offset 0x0f0 : 0x20da2080
+gpmi-nand 112000.gpmi-nand: offset 0x100 : 0x20da2080
+gpmi-nand 112000.gpmi-nand: offset 0x110 : 0x20da2080
+gpmi-nand 112000.gpmi-nand: offset 0x120 : 0x20da2080
+gpmi-nand 112000.gpmi-nand: offset 0x130 : 0x20da2080
+gpmi-nand 112000.gpmi-nand: offset 0x140 : 0x20da2080
+gpmi-nand 112000.gpmi-nand: offset 0x150 : 0x20da2080
+gpmi-nand 112000.gpmi-nand: offset 0x160 : 0x20da2080
+gpmi-nand 112000.gpmi-nand: offset 0x170 : 0x20da2080
+gpmi-nand 112000.gpmi-nand: BCH Geometry :
+GF length              : 13
+ECC Strength           : 8
+Page Size in Bytes     : 8410
+Metadata Size in Bytes : 10
+ECC Chunk0 Size in Bytes: 512
+ECC Chunkn Size in Bytes: 512
+ECC Chunk Count        : 16
+Payload Size in Bytes  : 8192
+Auxiliary Size in Bytes: 28
+Auxiliary Status Offset: 12
+Block Mark Byte Offset : 7987
+Block Mark Bit Offset  : 0
+gpmi-nand 112000.gpmi-nand: Chip: 0, Error -110
+libmtd: error!: MEMERASE64 ioctl gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+failed for eraseblock 0 (mtd0)
+ gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+       error 5 (Input/output errogpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+r)
+flash_erase: error!: /dev/mtdgpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+0: MTD Erase failure
+           gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+  error 5 (Input/output error)
+gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+Erasing 1024 Kibyte @ 100000 --  gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+1 % complete libmtd: error!: MEMEgpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+RASE64 ioctl failed for eraseblocgpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+k 1 (mtd0)
+        error 5 (Inpugpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+t/output error)
+flash_erase: errgpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+or!: /dev/mtd0: MTD Erase failuregpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+
+             error 5 (Input/outgpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+put error)
+Erasing 1024 Kibyte gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+@ 200000 --  3 % complete libmtd:gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+ error!: MEMERASE64 ioctl failed gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+for eraseblock 2 (mtd0)
+        gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+error 5 (Input/output error)
+flagpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+sh_erase: error!: /dev/mtd0: MTD gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 300000 --  4 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 3 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 400000 --  6 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 4 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 500000 --  7 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 5 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 600000 --  9 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 6 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 700000 -- 10 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 7 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 800000 -- 12 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 8 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 900000 -- 14 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 9 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ a00000 -- 15 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 10 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ b00000 -- 17 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 11 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ c00000 -- 18 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 12 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ d00000 -- 20 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 13 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ e00000 -- 21 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 14 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ f00000 -- 23 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 15 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 1000000 -- 25 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 16 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 1100000 -- 26 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 17 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 1200000 -- 28 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 18 (mtd0)
+        error 5 (Input/output egpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+rror)
+flash_erase: error!: /dev/gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+mtd0: MTD Erase failure
+        gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+     error 5 (Input/output error)gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+
+Erasing 1024 Kibyte @ 1300000 gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+-- 29 % complete libmtd: error!: gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+MEMERASE64 ioctl failed for erasegpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+block 19 (mtd0)
+        error 5 gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+(Input/output error)
+flash_erasegpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+: error!: /dev/mtd0: MTD Erase fagpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+ilure
+             error 5 (Inpugpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+t/output error)
+Erasing 1024 Kigpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+byte @ 1400000 -- 31 % complete lgpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+ibmtd: error!: MEMERASE64 ioctl fgpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+ailed for eraseblock 20 (mtd0)
+ gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+       error 5 (Input/output errogpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+r)
+flash_erase: error!: /dev/mtdgpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+0: MTD Erase failure
+           gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+  error 5 (Input/output error)
+Erasing 1024 Kibyte @ 1500000 -- 32 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 21 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 1600000 -- 34 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 22 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 1700000 -- 35 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 23 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 1800000 -- 37 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 24 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 1900000 -- 39 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 25 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 1a00000 -- 40 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 26 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 1b00000 -- 42 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 27 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 1c00000 -- 43 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 28 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 1d00000 -- 45 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 29 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 1e00000 -- 46 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 30 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 1f00000 -- 48 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 31 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 2000000 -- 50 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 32 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 2100000 -- 51 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 33 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 2200000 -- 53 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 34 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 2300000 -- 54 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 35 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 2400000 -- 56 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 36 (mtd0)
+gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+
+flash_erase: error!: /dev/mtd0: gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+MTD Erase failure
+             egpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+rror 5 (Input/output error)
+Eragpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+sing 1024 Kibyte @ 2500000 -- 57 gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+% complete libmtd: error!: MEMERAgpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+SE64 ioctl failed for eraseblock gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+37 (mtd0)
+        error 5 (Inputgpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+/output error)
+flash_erase: errogpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+
+             error 5 (Input/outpgpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+ut error)
+Erasing 1024 Kibyte @gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+ 2600000 -- 59 % complete libmtd:gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+ error!: MEMERASE64 ioctl failed gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+for eraseblock 38 (mtd0)
+       gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+ error 5 (Input/output error)
+flgpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+ash_erase: error!: /dev/mtd0: MTDgpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+ Erase failure
+             errogpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+r 5 (Input/output error)
+Erasing 1024 Kibyte @ 2700000 -- 60 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 39 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 2800000 -- 62 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 40 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 2900000 -- 64 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 41 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 2a00000 -- 65 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 42 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 2b00000 -- 67 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 43 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 2c00000 -- 68 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 44 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 2d00000 -- 70 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 45 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 2e00000 -- 71 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 46 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 2f00000 -- 73 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 47 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 3000000 -- 75 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 48 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 3100000 -- 76 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 49 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 3200000 -- 78 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 50 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 3300000 -- 79 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 51 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 3400000 -- 81 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 52 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 3500000 -- 82 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 53 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 3600000 -- 84 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 54 (mtd0)
+        error 5 (Input/output error)
+flashgpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+_erase: error!: /dev/mtd0: MTD Ergpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+ase failure
+             error 5gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+ (Input/output error)
+Erasing 1gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+024 Kibyte @ 3700000 -- 85 % compgpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+lete libmtd: error!: MEMERASE64 igpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+octl failed for eraseblock 55 (mtgpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+d0)
+        error 5 (Input/outpugpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+t error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 3800000 -- 87 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 56 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 3900000 -- 89 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 57 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 3a00000 -- 90 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 58 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 3b00000 -- 92 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 59 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 3c00000 -- 93 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 60 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (utp_poll: pass returned.
+Input/output error)
+Erasing 1024 Kibyte @ 3d00000 -- 95 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 61 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 3e00000 -- 96 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 62 (mtd0)
+        error 5 (Input/output error)
+flash_erase: error!: /dev/mtd0: MTD Erase failure
+             error 5 (Input/output error)
+Erasing 1024 Kibyte @ 3f00000 -- 98 % complete libmtd: error!: MEMERASE64 ioctl failed for eraseblock 63 (mtd0)
+        error gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+5 (Input/output error)
+flash_eragpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+se: error!: /dev/mtd0: MTD Erase gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+failure
+             error 5 (Ingpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+put/output error)
+Erasing 1024 gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+Kibyte @ 3f00000 -- 100 % complete
+UTP: sending Success to kernel for command $ flash_erase /dev/mtd0 0 0.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+UTP: received command '$ kobs-ng init -x -v --chip_0_device_path=/dev/mtd0 $FILE'
+UTP: executing "kobs-ng init -x -v --chip_0_device_path=/dev/mtd0 $FILE"
+MTD CONFIG:
+  chip_0_device_path = "/dev/mtd0"
+  chip_1_device_path = "(null)"
+  search_exponent = 2
+  data_setup_time = 80
+  data_hold_time = 60
+  address_setup_time = 25
+  data_sample_time = 6
+  row_address_size = 3
+  column_address_size = 2
+  read_command_code1 = 0
+  read_command_code2 = 48
+  boot_stream_major_version = 1
+  boot_stream_minor_version = 0
+  boot_stream_sub_version = 0
+  ncb_version = 3
+  boot_stream_1_address = 0
+  boot_stream_2_address = 0
+         -- We add the 1k-padding to the uboot.
+.tmp_kobs_ng: verifying using key '00000000000000000000000000000000'
+.tmp_kobs_ng: is a valid bootstream for key '00000000000000000000000000000000'
+mtd: use new bch layout raw access mode
+mtd: opening: "/dev/mtd0"
+NFC geometry :
+        ECC Strength       : 8
+        Page Size in Bytes : 8410
+        Metadata size      : 10
+        ECC Chunk Size in byte : 512
+        ECC Chunk count        : 16
+        Block Mark Byte Offset : 7987
+        Block Mark Bit Offset  : 0
+====================================================
+mtd: opened '/dev/mtd0' - '(null)'
+mtd: max_boot_stream_size_in_bytes = 29360128
+mtd: boot_stream_size_in_bytes = 475136
+mtd: boot_stream_size_in_pages = 58
+mtd: #1 0x00800000 - 0x02400000 (0x00874000)
+mtd: #2 0x02400000 - 0x04000000 (0x02474000)
+FCB
+  m_u32Checksum = 0x00000000
+  m_u32FingerPrint = 0x20424346
+  m_u32Version = 0x01000000
+  m_NANDTiming.m_u8DataSetup = 80
+  m_NANDTiming.m_u8DataHold = 60
+  m_NANDTiming.m_u8AddressSetup = 25
+  m_NANDTiming.m_u8DSAMPLE_TIME = 6
+  m_u32PageDataSize = 8192
+  m_u32TotalPageSize = 8640
+  m_u32SectorsPerBlock = 128
+  m_u32NumberOfNANDs = 0
+  m_u32TotalInternalDie = 0
+  m_u32CellType = 0
+  m_u32EccBlockNEccType = 4
+  m_u32EccBlock0Size = 512
+  m_u32EccBlockNSize = 512
+  m_u32EccBlock0EccType = 4
+  m_u32MetadataBytes = 10
+  m_u32NumEccBlocksPerPage = 15
+  m_u32EccBlockNEccLevelSDK = 0
+  m_u32EccBlock0SizeSDK = 0
+  m_u32EccBlockNSizeSDK = 0
+  m_u32EccBlock0EccLevelSDK = 0
+  m_u32NumEccBlocksPerPageSDK = 0
+  m_u32MetadataBytesSDK = 0
+  m_u32EraseThreshold = 0
+  m_u32Firmware1_startingPage = 1024
+  m_u32Firmware2_startingPage = 4608
+  m_u32PagesInFirmware1 = 58
+  m_u32PagesInFirmware2 = 58
+  m_u32DBBTSearchAreaStartAddress = 512
+  m_u32BadBlockMarkerByte = 7987
+  m_u32BadBlockMarkerStartBit = 0
+  m_u32BBMarkerPhysicalOffset = 8192
+  m_u32BCHType = 0
+  m_NANDTMTiming.m_u32TMTiming2_ReadLatency = 0
+  m_NANDTMTiming.m_u32TMTiming2_PreambleDelay = 0
+  m_NANDTMTiming.m_u32TMTiming2_CEDelay = 0
+  m_NANDTMTiming.m_u32TMTiming2_PostambleDelay = 0
+  m_NANDTMTiming.m_u32TMTiming2_CmdAddPause = 0
+  m_NANDTMTiming.m_u32TMTiming2_DataPause = 0
+  m_NANDTMTiming.m_u32TMSpeed = 0
+  m_NANDTMTiming.m_u32TMTiming1_BusyTimeout = 0
+  m_u32DISBBM = 0
+  m_u32BBMarkerPhysicalOffsetInSpareData = 0
+DBBT
+  m_u32Checksum = 0x00000000
+  m_u32FingerPrint = 0x54424244
+  m_u32Version = 0x01000000
+  m_u32DBBTNumOfPages = 0
+Firmware: image #0 @ 0x800000 size 0x74000 - available 0x1c00000
+Firmware: image #1 @ 0x2400000 size 0x74000 - available 0x1c00000
+-------------- Start to write the [ FCB ] -----
+mtd: erasing @0:0x0-0x100000
+mtd: device 0 fails MEMERASE (0x0 - 0x100000)
+mtd: Failed to erase block @0x0
+mtd: erasing @0:0x100000-0x200000
+mtd: device 0 fails MEMERASE (0x100000 - 0x100000)
+mtd: Failed to erase block @0x100000
+mtd: erasing @0:0x200000-0x300000
+mtd: device 0 fails MEMERASE (0x200000 - 0x100000)
+mtd: Failed to erase block @0x200000
+mtd: erasing @0:0x300000-0x400000
+mtd: device 0 fails gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+MEMERASE (0x300000 - 0x100000)
+mgpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+td: Failed to erase block @0x3000gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+00
+mtd_commit_bcb(FCB): status 4gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+
+
+-------------- Start to writegpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+ the [ DBBT ] -----
+mtd: erasinggpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+ @0:0x400000-0x500000
+mtd: devicgpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+e 0 fails MEMERASE (0x400000 - 0xgpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+100000)
+mtd: Failed to erase blogpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+ck @0x400000
+mtd: erasing @0:0x5gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+00000-0x600000
+mtd: device 0 faigpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+ls MEMERASE (0x500000 - 0x100000)gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+
+mtd: Failed to erase block @0x5gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+00000
+mtd: erasing @0:0x600000-0gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+x700000
+mtd: device 0 fails MEMEgpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+RASE (0x600000 - 0x100000)
+mtd: gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+Failed to erase block @0x600000
+gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+mtd: erasing @0:0x700000-0x800000gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+
+mtd: device 0 fails MEMERASE (0gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+x700000 - 0x100000)
+mtd: Failed gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+to erase block @0x700000
+mtd_comgpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+mit_bcb(DBBT): status 4
+
+------gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+---- Start to write the [ .tmp_kogpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+bs_ng ]----
+mtd: Writting .tmp_kgpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+obs_ng: #0 @0: 0x00800000 - 0x008gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+74000
+mtd: erasing @0:0x800000-0gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+x900000
+mtd: device 0 fails MEMEgpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+RASE (0x800000 - 0x100000)
+mtd: gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+Failed to erase block@0x800000
+mgpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+gpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+
+mtd: device 0 fails MEMERASE (0xgpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+900000 - 0x100000)
+mtd: Failed tgpmi-nand 112000.gpmi-nand: Chip: 0, Error -22
+o erase block@0x900000
+mtd: erasing @0:0xa00000-0xb00000
+mtd: device 0 fails MEMERASE (0xa00000 - 0x100000)
+mtd: Failed to erase block@0xa00000
+mtd: erasing @0:0xb00000-0xc00000
+mtd: device 0 fails MEMERASE (0xb00000 - 0x100000)
+mtd: Failed to erase block@0xb00000
+mtd: erasing @0:0xc00000-0xd00000
+mtd: device 0 fails MEMERASE (0xc00000 - 0x100000)
+mtd: Failed to erase block@0xc00000
+mtd: erasing @0:0xd00000-0xe00000
+mtd: device 0 fails MEMERASE (0xd00000 - 0x100000)
+mtd: Failed to erase block@0xd00000
+mtd: erasing @0:0xe00000-0xf00000
+mtd: device 0 fails MEMERASE (0xe00000 - 0x100000)
+mtd: Failed to erase block@0xe00000
+mtd: erasing @0:0xf00000-0x1000000
+mtd: device 0 fails MEMERASE (0xf00000 - 0x100000)
+mtd: Failed to erase block@0xf00000
+mtd: erasing @0:0x1000000-0x1100000
+mtd: device 0 fails MEMERASE (0x1000000 - 0x100000)
+mtd: Failed to erase block@0x1000000
+mtd: erasing @0:0x1100000-0x1200000
+mtd: device 0 fails MEMERASE (0x1100000 - 0x100000)
+mtd: Failed to erase block@0x1100000
+mtd: erasing @0:0x1200000-0x1300000
+mtd: device 0 fails MEMERASE (0x1200000 - 0x100000)
+mtd: Failed to erase block@0x1200000
+mtd: erasing @0:0x1300000-0x1400000
+mtd: device 0 fails MEMERASE (0x1300000 - 0x100000)
+mtd: Failed to erase block@0x1300000
+mtd: erasing @0:0x1400000-0x1500000
+mtd: device 0 fails MEMERASE (0x1400000 - 0x100000)
+mtd: Failed to erase block@0x1400000
+mtd: erasing @0:0x1500000-0x1600000
+mtd: device 0 fails MEMERASE (0x1500000 - 0x100000)
+mtd: Failed to erase block@0x1500000
+mtd: erasing @0:0x1600000-0x1700000
+mtd: device 0 fails MEMERASE (0x1600000 - 0x100000)
+mtd: Failed to erase block@0x1600000
+mtd: erasing @0:0x1700000-0x1800000
+mtd: device 0 fails MEMERASE (0x1700000 - 0x100000)
+mtd: Failed to erase block@0x1700000
+mtd: erasing @0:0x1800000-0x1900000
+mtd: device 0 fails MEMERASutp_poll: exit with status 1280
+E (0x1800000 - 0x100000)
+mtd: Failed to erase block@0x1800000
+mtd: erasing @0:0x1900000-0x1a00000
+mtd: device 0 fails MEMERASE (0x1900000 - 0x100000)
+mtd: Failed to erase block@0x1900000
+mtd: erasing @0:0x1a00000-0x1b00000
+mtd: device 0 fails MEMERASE (0x1a00000 - 0x100000)
+mtd: Failed to erase block@0x1a00000
+mtd: erasing @0:0x1b00000-0x1c00000
+mtd: device 0 fails MEMERASE (0x1b00000 - 0x100000)
+mtd: Failed to erase block@0x1b00000
+mtd: erasing @0:0x1c00000-0x1d00000
+mtd: device 0 fails MEMERASE (0x1c00000 - 0x100000)
+mtd: Failed to erase block@0x1c00000
+mtd: erasing @0:0x1d00000-0x1e00000
+mtd: device 0 fails MEMERASE (0x1d00000 - 0x100000)
+mtd: Failed to erase block@0x1d00000
+mtd: erasing @0:0x1e00000-0x1f00000
+mtd: device 0 fails MEMERASE (0x1e00000 - 0x100000)
+mtd: Failed to erase block@0x1e00000
+mtd: erasing @0:0x1f00000-0x2000000
+mtd: device 0 fails MEMERASE (0x1f00000 - 0x100000)
+mtd: Failed to erase block@0x1f00000
+mtd: erasing @0:0x2000000-0x2100000
+mtd: device 0 fails MEMERASE (0x2000000 - 0x100000)
+mtd: Failed to erase block@0x2000000
+mtd: erasing @0:0x2100000-0x2200000
+mtd: device 0 fails MEMERASE (0x2100000 - 0x100000)
+mtd: Failed to erase block@0x2100000
+mtd: erasing @0:0x2200000-0x2300000
+mtd: device 0 fails MEMERASE (0x2200000 - 0x100000)
+mtd: Failed to erase block@0x2200000
+mtd: erasing @0:0x2300000-0x2400000
+mtd: device 0 fails MEMERASE (0x2300000 - 0x100000)
+mtd: Failed to erase block@0x2300000
+mtd: mtd_write_page failed
+Failed to write safe page
+mtd: We write one page for save guard. *
+mtd: Failed to write BS#0
+FAILED to commit structures
+UTP: sending Non-success to kernel for command $ kobs-ng init -x -v --chip_0_device_path=/dev/mtd0 $FILE.
